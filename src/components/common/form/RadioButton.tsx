@@ -5,7 +5,7 @@ import InputLabel from './InputLabel';
 
 import { MdClear } from 'react-icons/md';
 
-interface Props {
+interface IProps {
   label: string;
   name: string;
   isMandatory: boolean;
@@ -17,7 +17,7 @@ interface Props {
   disabled?: boolean;
 }
 
-const RadioButton = (props: Props) => {
+const RadioButton = (props: IProps) => {
   const { label, name, isMandatory, selectedValue, selectOptions, error, handleChange, canReset, disabled } = props;
 
   const handleOnChange = (event: ChangeEvent<HTMLInputElement>) =>

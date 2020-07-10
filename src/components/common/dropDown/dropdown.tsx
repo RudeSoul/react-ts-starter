@@ -2,8 +2,17 @@ import React from 'react';
 import Select, { ActionMeta } from 'react-select';
 import classnames from 'classnames';
 
-class DropDown extends React.Component<any, any> {
-  constructor(props: any) {
+interface IProps {
+  name?: string;
+  onInputFieldChange: (name: string, value: string) => void;
+  isPlain?: boolean;
+  isSmall?: boolean;
+  customClassName?: string;
+  defaultValue?: any;
+}
+
+class DropDown extends React.Component<IProps, any> {
+  constructor(props: IProps) {
     super(props);
   }
 

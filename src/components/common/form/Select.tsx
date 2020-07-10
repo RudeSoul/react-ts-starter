@@ -8,7 +8,7 @@ const StyledErrorMessage = styled.div``;
 
 const StyledLabel = styled.label``;
 
-interface Props {
+interface IProps {
   label?: string;
   id?: string;
   name?: string;
@@ -19,7 +19,7 @@ interface Props {
  * Generic Select component
  * @param {*} param
  */
-const Select = ({ label, ...props }: Props) => {
+const Select = ({ label, ...props }: IProps) => {
   const [field, meta] = useField(props as any);
   return (
     <>

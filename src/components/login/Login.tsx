@@ -5,6 +5,10 @@ import { withAuthState } from 'components/hoc/auth';
 import LoginForm from './LoginForm';
 import { logoFull } from 'assets/images';
 
+interface IProps {
+  login: (email: string, password: string) => void;
+}
+
 class Login extends Component {
   render() {
     const { login }: any = this.props;

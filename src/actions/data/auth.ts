@@ -1,11 +1,7 @@
-export const SET_LOGGING_IN = 'SET_LOGGING_IN';
-export const SET_IS_LOGGED_IN = 'SET_IS_LOGGED_IN';
-export const SET_LOGGED_IN_USER = 'SET_LOGGED_IN_USER';
-
 export enum AuthActionTypes {
-  SET_LOGGING_IN,
-  SET_IS_LOGGED_IN,
-  SET_LOGGED_IN_USER,
+  SET_LOGGING_IN = 'SET_LOGGING_IN',
+  SET_IS_LOGGED_IN = 'SET_IS_LOGGED_IN',
+  SET_LOGGED_IN_USER = 'SET_IS_LOGGED_IN',
 }
 
 export interface AuthAction {

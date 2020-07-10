@@ -1,15 +1,15 @@
 import React, { ChangeEvent } from 'react';
 import PropTypes from 'prop-types';
 
-interface Props {
-  handleChange: Function;
+interface IProps {
+  handleChange: (obj: { target: { name: string; value: number } }) => void;
   value: any;
   name: string;
   label: string;
   disabled: boolean;
 }
 
-const CheckBox = (props: Props) => {
+const CheckBox = (props: IProps) => {
   const handleOnChange = (event: ChangeEvent) => {
     const { handleChange, value } = props;
 

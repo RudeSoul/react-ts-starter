@@ -1,8 +1,8 @@
 import * as Sentry from '@sentry/browser';
 
-import config from '../config';
+import config from 'config';
 
-import { PRODUCTION } from '../constants/env';
+import { PRODUCTION } from 'constants/env';
 
 /**
  * Initialize Sentry.

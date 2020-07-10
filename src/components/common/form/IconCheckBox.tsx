@@ -2,7 +2,7 @@ import React, { ChangeEvent } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-interface Props {
+interface IProps {
   label?: string;
   name?: string;
   IconComponent?: any;
@@ -14,7 +14,7 @@ interface Props {
   disabled?: boolean;
 }
 
-const IconCheckBox = (props: Props) => {
+const IconCheckBox = (props: IProps) => {
   const { label, name, IconComponent, isIconImage, parentClass, value, error, handleChange, disabled } = props;
 
   const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {

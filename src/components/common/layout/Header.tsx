@@ -10,17 +10,17 @@ import * as routes from 'constants/routes';
 import { withAuthState } from 'components/hoc/auth';
 import { MouseEventHandler } from 'react-select';
 
-interface Props {
+interface IProps {
   loggedInUser: any;
   logout: MouseEventHandler;
 }
 
-const Header = ({ loggedInUser, logout }: Props) => {
+const Header = ({ loggedInUser, logout }: IProps) => {
   const [isMenuShown, setIsMenuShown] = useState(false);
 
   return (
     <>
-      <nav className="navbar navbar--bordered-bottom navbar--sticky" id="header-navbar">
+      <nav className="navbar navbar--bordered-bottom navbar--sticky">
         <div className="container">
           <div className="navbar__wrap navbar__wrap--content-spread">
             <div className="navbar__left">
@@ -47,7 +47,7 @@ const Header = ({ loggedInUser, logout }: Props) => {
                 <FiChevronDown className="color-grey-40" onClick={() => setIsMenuShown(!isMenuShown)} />
                 <div className={classnames('dropmenu', { show: isMenuShown })}>
                   <div className="dropmenu__node">
-                    <a href="logout" title="Logout" onClick={logout}>
+                    <a href="#" title="Logout" onClick={logout}>
                       Log Out
                     </a>
                   </div>

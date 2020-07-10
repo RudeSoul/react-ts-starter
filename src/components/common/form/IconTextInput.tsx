@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import InputLabel from './InputLabel';
 
-interface Props {
+interface IProps {
   label: string;
   name?: string;
   isMandatory?: boolean;
@@ -20,7 +20,7 @@ interface Props {
   disabled?: boolean;
 }
 
-const IconTextInput = (props: Props) => {
+const IconTextInput = (props: IProps) => {
   const {
     label,
     name,

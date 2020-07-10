@@ -1,6 +1,6 @@
-import http from '../utils/http';
+import http from 'utils/http';
 
-import config from '../config';
+import config from 'config';
 
 import * as tokenService from './token';
 

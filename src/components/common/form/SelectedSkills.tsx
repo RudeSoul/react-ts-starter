@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdClose } from 'react-icons/md';
 
-interface Skill {
+interface ISkill {
   name: string;
   id: string;
   skillCategory: {
@@ -9,13 +9,13 @@ interface Skill {
   };
 }
 
-interface Props {
-  skills: Skill[];
-  onDeleteClick: (name: string, skill: Skill) => void;
+interface IProps {
+  skills: ISkill[];
+  onDeleteClick: (name: string, skill: ISkill) => void;
   disabled?: boolean;
 }
 
-const SelectedSkills = (props: Props) => {
+const SelectedSkills = (props: IProps) => {
   const { skills, onDeleteClick, disabled } = props;
 
   return (

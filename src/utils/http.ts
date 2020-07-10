@@ -7,7 +7,6 @@ import config from '../config';
  */
 const http = axios.create({
   baseURL: config.baseURI,
-  retryCount: 5,
   headers: {
     'Content-Type': 'application/json',
   },

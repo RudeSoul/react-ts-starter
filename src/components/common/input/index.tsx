@@ -1,3 +1,4 @@
-import Input from './input';
+import Input, { InputTypes } from './input';
 
 export default Input;
+export { InputTypes };

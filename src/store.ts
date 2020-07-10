@@ -10,8 +10,8 @@ const store = createStore(
   rootReducer,
   compose(
     applyMiddleware(thunk),
-    process.env.REACT_APP_ENV !== env.PRODUCTION && (window as any).__REDUX_DEVTOOLS_EXTENSION__
-      ? (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+    process.env.REACT_APP_ENV !== env.PRODUCTION && window.__REDUX_DEVTOOLS_EXTENSION__
+      ? window.__REDUX_DEVTOOLS_EXTENSION__()
       : (f: any) => f
   )
 );

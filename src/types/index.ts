@@ -1,6 +1,7 @@
 import { AuthAction, AuthActionTypes } from './Auth';
-import { EmployeeFetchOptions } from './Employees';
+import { EmployeeFetchOptions, EmployeeData } from './Employees';
+import { InputTypes } from './Inputs';
 
-export type { AuthAction, EmployeeFetchOptions };
+export type { AuthAction, EmployeeData, EmployeeFetchOptions };
 
-export { AuthActionTypes };
+export { AuthActionTypes, InputTypes };

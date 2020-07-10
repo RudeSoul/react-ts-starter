@@ -4,7 +4,13 @@ import { Formik } from 'formik';
 import loginSchema from 'schemas/login';
 import Input from 'components/common/input';
 
-const EmailLogin = ({ login }: { login: Function }) => (
+import { InputTypes } from 'types';
+
+interface IProps {
+  login: (email: string, pw: string) => void;
+}
+
+const EmailLogin = ({ login }: IProps) => (
   <Formik
     initialValues={{
       email: '',
@@ -24,7 +30,7 @@ const EmailLogin = ({ login }: { login: Function }) => (
             id="email"
             labelText="Email"
             name="email"
-            type="text"
+            type={InputTypes.email}
             required
             placeholder="Your Email address"
             onChange={props.handleChange}
@@ -38,7 +44,7 @@ const EmailLogin = ({ login }: { login: Function }) => (
             id="password"
             labelText="Password"
             name="password"
-            type="password"
+            type={InputTypes.password}
             required
             placeholder="Your Password"
             onChange={props.handleChange}

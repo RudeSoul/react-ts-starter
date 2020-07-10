@@ -10654,10 +10654,10 @@ pinkie@^2.0.0:
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
   integrity sha1-clVrgM+g1IqXToDnckjoDtT3+HA=
 
-pinterpolate@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/pinterpolate/-/pinterpolate-0.2.2.tgz#0496fe42240a7270ba39c06cb579ea2e4609e2d3"
-  integrity sha512-b8WW0324sW6dncdihwMYtDpCLULXl2L+dDAPctAbvS1O7WJaYcQLfQjUZxsw94r0qKGUrP/OJwI7MOkNutmZtg==
+pinterpolate@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/pinterpolate/-/pinterpolate-0.2.3.tgz#d35408cf26670ae2a6dddebfbab06e824a20e382"
+  integrity sha512-ZlNZGJ9ujvZEO8MFwKYWhbaI9v/4kTNIG+4a2AQLdqD1/75/bfzZqUqjeWvjeMKk9D0IJY+XJVio2/N9MfhVtQ==
 
 pirates@^4.0.1:
   version "4.0.1"

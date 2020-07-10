@@ -5,7 +5,7 @@ import classnames from 'classnames';
 
 import InputLabel from './InputLabel';
 
-interface Props {
+interface IProps {
   label?: string;
   isMandatory?: boolean;
   name?: string;
@@ -19,7 +19,7 @@ interface Props {
   uniqueIdentifier?: string;
 }
 
-const FormSelect = (props: Props) => {
+const FormSelect = (props: IProps) => {
   const { label, isMandatory, name, error, placeholder, value, options, handleChange, disabled, clearable } = props;
 
   return (

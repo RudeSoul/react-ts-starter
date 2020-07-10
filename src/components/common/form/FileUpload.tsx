@@ -2,7 +2,7 @@ import React from 'react';
 
 import InputLabel from './InputLabel';
 
-interface Props {
+interface IProps {
   label: string;
   file?: any;
   comment?: string;
@@ -15,7 +15,7 @@ interface Props {
   handleChange: (obj: { target: { name: string; value: File | null } }) => void;
 }
 
-const FileUpload = (props: Props) => {
+const FileUpload = (props: IProps) => {
   const { label, file, comment, validExtentions, isMandatory, error, name, empId, disabled, handleChange } = props;
 
   return (

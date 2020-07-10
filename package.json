@@ -1,5 +1,5 @@
 {
-  "name": "gwell-web-app",
+  "name": "@leapfrogtechnology/react-ts-starter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,7 +13,7 @@
     "izitoast": "^1.4.0",
     "lodash": "^4.17.15",
     "moment": "^2.27.0",
-    "pinterpolate": "^0.2.2",
+    "pinterpolate": "^0.2.3",
     "react": "^16.13.1",
     "react-datepicker": "^3.0.0",
     "react-dates": "^21.8.0",

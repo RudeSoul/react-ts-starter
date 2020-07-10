@@ -2,13 +2,13 @@ import React from 'react';
 
 import classnames from 'classnames';
 
-interface Props {
+interface IProps {
   handleTabChange: (tab: string) => void;
   selected: string;
   items: string[];
 }
 
-const CategoryTabs = (props: Props) => {
+const CategoryTabs = (props: IProps) => {
   const { handleTabChange, selected, items } = props;
 
   const renderTabList = (tabs: string[]) => {

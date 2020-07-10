@@ -5,10 +5,15 @@ import * as routes from 'constants/routes';
 
 import { withAuthState } from 'components/hoc/auth';
 
+interface IProps {
+  isLoggedIn?: boolean;
+  [key: string]: any;
+}
+
 /**
  * Component to authenticate routes.
  */
-class PrivateRoute extends Component<any, any> {
+class PrivateRoute extends Component<IProps, any> {
   render() {
     let { isLoggedIn } = this.props;
 

@@ -50,14 +50,9 @@ export async function responseInterceptor(error: AxiosError) {
     return Promise.reject(error);
   }
 
-  const originalRequest = error.config;
+  const originalRequest = error.config as any;
 
-  const err = error && error.response && error.response.data && error.response.data.error;
-  let code, message;
-  if (err) {
-    code = err.code;
-    message = err.message;
-  }
+  const { code, message } = error.response.data.error;
 
   if (code === HttpStatus.UNAUTHORIZED && message === TOKEN_EXPIRE && !originalRequest.__isRetryRequest) {
     originalRequest._retry = true;

@@ -4,10 +4,15 @@ import * as employeeService from 'services/employee';
 import * as toast from 'utils/toast';
 import { RouteComponentProps } from 'react-router-dom';
 
-interface Props extends RouteComponentProps {}
+import { EmployeeData } from 'types';
 
-class EditEmployee extends Component<Props, any> {
-  constructor(props: Props) {
+interface IState {
+  data: EmployeeData;
+  id: string;
+}
+
+class EditEmployee extends Component<RouteComponentProps, IState> {
+  constructor(props: RouteComponentProps) {
     super(props);
     this.state = {
       data: {

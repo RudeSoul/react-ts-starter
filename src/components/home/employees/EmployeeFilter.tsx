@@ -7,14 +7,14 @@ import { EmployeeFetchOptions } from 'types';
 
 const SEARCH_DELAY = 300;
 
-interface Props {
+interface IProps {
   onFilter: (params?: EmployeeFetchOptions) => void;
 }
 
-class EmployeeFilter extends Component<Props, any> {
+class EmployeeFilter extends Component<IProps, any> {
   onKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.keyCode === keys.ENTER) {
-      this.props.onFilter({ firstName: (e.target as HTMLTextAreaElement).value });
+      this.props.onFilter({ firstName: (e.target as HTMLInputElement).value });
     }
   };
 

@@ -1,15 +1,10 @@
-import config from '../config';
-import http from '../utils/http';
+import config from 'config';
+import http from 'utils/http';
+
+import { EmployeeData } from 'types';
 
 export interface EmployeeFetchOptions {
   firstName?: string;
-}
-
-export interface Employee {
-  id?: number;
-  firstName: string;
-  lastName: string;
-  designation: string;
 }
 
 /**
@@ -20,7 +15,6 @@ export interface Employee {
  */
 export async function fetchEmployees(options: EmployeeFetchOptions = {}) {
   const employees = await http.get(config.endpoints.employee, {
-    retryCount: 5,
     params: {
       firstName_like: options.firstName,
     },
@@ -35,7 +29,7 @@ export async function fetchEmployees(options: EmployeeFetchOptions = {}) {
  * @param {object} employee
  * @returns {object}
  */
-export async function save(employee: Employee) {
+export async function save(employee: EmployeeData) {
   const response = await http.post(config.endpoints.employee, employee);
 
   return response.data;
@@ -47,7 +41,7 @@ export async function save(employee: Employee) {
  * @param {object} employee
  * @returns {object}
  */
-export async function update(employee: Employee) {
+export async function update(employee: EmployeeData) {
   const response = await http.put(`${config.endpoints.employee}/${employee.id}`, employee);
 
   return response.data;

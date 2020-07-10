@@ -20,13 +20,13 @@ const designationOptions = DESIGNATION_OPTIONS.map(designation => {
   return { label: designation, value: designation };
 });
 
-interface Props {
+interface IProps {
   id?: string;
   data: any;
 }
 
-class EmployeeForm extends React.Component<Props, any> {
-  constructor(props: Props) {
+class EmployeeForm extends React.Component<IProps, any> {
+  constructor(props: IProps) {
     super(props);
     this.state = {
       loading: false,

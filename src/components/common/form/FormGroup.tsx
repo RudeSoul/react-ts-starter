@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import InputLabel from './InputLabel';
 
-interface Props {
+interface IProps {
   name: string;
   type?: string;
   label?: string;
@@ -19,7 +19,7 @@ interface Props {
   disabled?: boolean;
 }
 
-const FormGroup = (props: Props) => {
+const FormGroup = (props: IProps) => {
   const {
     name,
     type,

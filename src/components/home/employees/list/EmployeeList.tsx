@@ -14,7 +14,7 @@ import EmployeeFilter from '../EmployeeFilter';
 import Table from 'components/common/table';
 import { CellProps } from 'react-table';
 
-interface Props {}
+interface IProps {}
 
 const columns = [
   {
@@ -52,8 +52,8 @@ const columns = [
  * Sample component to list employee
  *
  */
-class EmployeeList extends Component<Props, any> {
-  constructor(props: Props) {
+class EmployeeList extends Component<IProps, any> {
+  constructor(props: IProps) {
     super(props);
     this.state = {
       employees: [],

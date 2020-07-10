@@ -1,13 +1,13 @@
 import React, { useMemo } from 'react';
 import { useTable, useFlexLayout, TableHeaderProps } from 'react-table';
 
-interface Props {
+interface IProps {
   columns: any[];
   data: any[];
   onRowClick: Function;
 }
 
-const Table = ({ columns, data, onRowClick }: Props) => {
+const Table = ({ columns, data, onRowClick }: IProps) => {
   const getStyles = (props: Partial<TableHeaderProps>, align = 'left') => [
     props,
     {

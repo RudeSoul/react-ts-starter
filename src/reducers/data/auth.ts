@@ -1,4 +1,4 @@
-import { AuthActionTypes, AuthAction } from '../../types';
+import { AuthActionTypes, AuthAction } from 'types';
 
 const INITIAL_STATE = {
   isLoggedIn: false,

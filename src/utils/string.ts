@@ -1,4 +1,4 @@
-import pinterpolate from 'pinterpolate';
+import pinterpolate, { Params } from 'pinterpolate';
 
 /**
  * Build supplied string by interpolating properties after delimiter(':') with the given parameters.
@@ -11,4 +11,4 @@ import pinterpolate from 'pinterpolate';
  * @param {object} params
  * @returns {string}
  */
-export const interpolate = (str: string, params: anyObject) => pinterpolate(str, params);
+export const interpolate = (str: string, params: Params) => pinterpolate(str, params);

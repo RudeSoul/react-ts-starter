@@ -9,7 +9,7 @@ import { FiCalendar } from 'react-icons/fi';
 import InputLabel from './InputLabel';
 import { REACT_DATEPICKER_DATE_FORMAT } from '../../../constants/appConstants';
 
-interface Props {
+interface IProps {
   label: string;
   name: string;
   isMandatory?: boolean;
@@ -20,7 +20,7 @@ interface Props {
   disabled?: boolean;
 }
 
-const DateSelector = (props: Props) => {
+const DateSelector = (props: IProps) => {
   const { label, name, isMandatory, placeholderText, value, error, handleChange, disabled } = props;
 
   const handleOnChange = (selectedDate: Date | null) =>

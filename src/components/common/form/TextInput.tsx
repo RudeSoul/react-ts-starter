@@ -1,7 +1,7 @@
 import React from 'react';
 import { useField } from 'formik';
 
-interface Props {
+interface IProps {
   label: string;
   name: string;
   id: string;
@@ -11,7 +11,7 @@ interface Props {
  * Generic TextInput field
  * @param {*} param
  */
-const TextInput = ({ label, ...props }: Props) => {
+const TextInput = ({ label, ...props }: IProps) => {
   const [field, meta] = useField(props as any);
   return (
     <>

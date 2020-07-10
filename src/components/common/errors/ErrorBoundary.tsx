@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, ErrorInfo, PropsWithChildren } from 'react';
 
 import * as sentry from 'utils/sentry';
 
-class ErrorBoundary extends Component<any, any> {
-  constructor(props: any) {
+class ErrorBoundary extends Component<PropsWithChildren<any>, any> {
+  constructor(props: PropsWithChildren<any>) {
     super(props);
     this.state = { hasError: false };
   }
@@ -12,7 +12,7 @@ class ErrorBoundary extends Component<any, any> {
     return { hasError: true };
   }
 
-  componentDidCatch(error: any, errorInfo: any) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     sentry.catchErrorsWithScope(error, errorInfo);
   }
 

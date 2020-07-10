@@ -2,17 +2,16 @@ import moment from 'moment';
 import classnames from 'classnames';
 import React, { Component, ChangeEventHandler, FocusEventHandler } from 'react';
 
-enum InputTypes {
+export enum InputTypes {
   date = 'date',
   password = 'password',
   text = 'text',
+  email = 'email',
 }
 
-type InputType = 'date' | 'password' | 'text';
-
-interface Props {
+interface IProps {
   initialValue?: string;
-  type: InputType;
+  type: InputTypes;
   labelText: string;
   required: boolean;
   placeholder?: string;
@@ -25,8 +24,8 @@ interface Props {
   onInputFieldChange?: (name: string, dateOnly: string) => void;
 }
 
-class Input extends Component<Props, any> {
-  constructor(props: Props) {
+class Input extends Component<IProps, any> {
+  constructor(props: IProps) {
     super(props);
     this.state = {
       date: this.props.type === 'date' && this.props.initialValue ? moment(this.props.initialValue) : null,

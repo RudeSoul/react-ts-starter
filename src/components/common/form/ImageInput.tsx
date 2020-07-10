@@ -3,7 +3,7 @@ import React from 'react';
 //import InputLabel from './InputLabel';
 import FileUpload from './FileUpload';
 
-interface Props {
+interface IProps {
   handleChange: Function;
   image?: any;
   url?: string;
@@ -16,8 +16,8 @@ interface Props {
   isCreateForm?: boolean;
 }
 
-class ImageInput extends React.Component<Props, any> {
-  constructor(props: Props) {
+class ImageInput extends React.Component<IProps, any> {
+  constructor(props: IProps) {
     super(props);
     this.state = {
       default: null,
@@ -44,7 +44,7 @@ class ImageInput extends React.Component<Props, any> {
     );
   };
 
-  populateFieldFrom(props: Props) {
+  populateFieldFrom(props: IProps) {
     if (props.image) {
       this.setState({
         file: props.image,
@@ -63,7 +63,7 @@ class ImageInput extends React.Component<Props, any> {
     this.populateFieldFrom(this.props);
   }
 
-  componentWillReceiveProps(props: Props) {
+  componentWillReceiveProps(props: IProps) {
     this.populateFieldFrom(props);
   }
 
